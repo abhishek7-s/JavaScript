@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learnig</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+
+
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+
+    div.style.backgroundColor = "darkgreen"
+    div.innerHTML = "<h1>Hello</h1>"
+    
+    const childDiv = document.createElement('div')
+    childDiv.style.backgroundColor = "red"
+
+    //Appending new div in parent div
+
+    div.appendChild(childDiv)
+    document.body.appendChild(div)
+
+    div.style.height = "500px"
+
+    childDiv.innerHTML = "<p>lorem bkebf fksjbfs ffbks s</p>"
+    childDiv.style.height = "50%"
+    childDiv.style.width= "50%"
+    
+
+    div.style.display = "flex"
+    div.style.flexDirection = "column"
+    div.style.justifyContent = "center"
+    div.style.alignItems = "center"
+
+    childDiv.style.color = "#212121"
+    childDiv.style.backgroundColor= "grey"
+    childDiv.innerHTML = "<h2>Child</h2>"  // this has overwritten the older innerHTML
+
+    const addText = document.createTextNode("CHILD 1")
+    childDiv.appendChild(addText)
+
+
+</script>
+
+</html>

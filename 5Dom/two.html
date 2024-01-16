@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: #fff;
+        font-size: 25px;
+    }
+
+</style>
+<body>
+    <ul class="langs">
+        <li>Java</li>
+    </ul>
+</body>
+<script>
+    //creating an function to add element in list
+
+    function addli(name){
+        const li = document.createElement('li')
+        li.innerHTML = `${name}`
+        document.querySelector('.langs').appendChild(li)
+    }
+    
+    addli("Javascript")
+    addli("Python")
+    addli("C++")
+
+    // Same but optimized way
+    function addliOpti(name){
+        const li = document.createElement('li')
+        // li.innerHTML = `${name}`
+        li.appendChild(document.createTextNode(name))
+        document.querySelector('.langs').appendChild(li)
+    }
+
+    addliOpti("GOlang")
+
+    //Function for editimg the li 
+
+    function editN(no , newName) {
+        const editone = document.querySelector(`li:nth-child(${no})`)
+        // editone.appendChild(document.createTextNode(newName))
+        const newli = document.createElement('li')
+        newli.innerHTML = newName
+        editone.replaceWith(newli)
+    }
+
+    // editN(3,"HTML")
+    // editN(4,"Typescript")
+    // editN(1,"Rust")
+
+
+    //Remove Function for li
+
+    function removeli(no){
+        const current = document.querySelector(`li:nth-child(${no})`)
+        current.remove()
+    }
+
+    // removeli(3)
+
+</script>
+</html>
