@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #313131;
+    color: antiquewhite;
+}
+
+.main{
+    /* background-color: aquamarine; */
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.list h1{
+    margin: 10px;
+}
+
+.list{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 46);
+    /* height: inherit; */
+    width: 500px;
+    border-radius: 20px;
+    position: relative;
+    top: 15vh;
+}
+.insert{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px;
+}
+
+.ipBtn{
+    height: 40px;
+    width: 70%;
+    border: 2px solid green;
+    background-color: rgba(255, 255, 255, 0.162);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.addBtn{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.267);
+    color: green;
+    font-size: 25px;
+    text-align: center;
+}
+
+.todos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(12, 12, 12); */
+    width: 100%;
+    margin: 5px;
+}
+.todos li{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    height: 50px;
+    width: 80%;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background-color: rgba(31, 27, 44, 0.434);
+    list-style: none;
+    font-size: 30px;
+}
+#checkDone{
+    margin: 0 25px 0 10px; 
+    height: 25px;
+    width: 25px;
+}
